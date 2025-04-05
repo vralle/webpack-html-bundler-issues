@@ -73,7 +73,7 @@ const webpackConfig = {
       entry: {
         index: {
           import: 'src/views/index.html',
-          data: 'src/render-data/index.js',
+          data: 'src/render-data/index.mjs',
         },
       },
       css: {
@@ -91,7 +91,7 @@ const webpackConfig = {
   optimization: {},
   devServer: {
     static: {
-      directory: join(process.cwd(), 'public'), // Default. But the project doesn't use a directory with the static files.
+      directory: join(process.cwd(), 'public'), // Default. But the project doesn't use a directory with static files.
       publicPath: '/', // Default. See https://webpack.js.org/configuration/dev-server/#publicpath
       watch: false, // Disable watching the files served by the `static.directory`
     },
