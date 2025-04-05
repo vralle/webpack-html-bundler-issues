@@ -1,0 +1,8 @@
+{
+  "name": "webpack-html-bundler issues",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "mounts": [
+    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+  ],
+  "postCreateCommand": "npm install"
+}

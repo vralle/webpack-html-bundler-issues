@@ -1,0 +1,23 @@
+{
+  "name": "dev-server-watch-example",
+  "version": "0.0.1",
+  "description": "Example webpack project",
+  "type": "module",
+  "scripts": {
+    "build": "webpack build --mode production",
+    "start": "webpack serve --mode development"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-bundler-webpack-plugin": "^4.18.2",
+    "sass-embedded": "^1.85.0",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
+  }
+}

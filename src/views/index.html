@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Webpack Lve Reload Example</title>
+        <meta name="description" content="This is an example">
+        <meta name="robots" content="noindex">
+        <link rel="stylesheet" href="@src/scss/styles.scss">
+    </head>
+
+    <body>
+        <div class="container py-4 px-3 mx-auto">
+            <header class="d-flex justify-content-between align-items-md-center pb-3 mb-5 border-bottom">
+                <h1 class="h4">
+                    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                        <img class="bi bi-bootstrap-fill d-inline-block me-2" src="@src/img/logo.svg" width="36" height="36" alt="image example">
+                        <span>Webpack</span>
+                    </a>
+                </h1>
+            </header>
+            <%~ console.log('typeof it: ', typeof it) %>
+            <%~ console.log('it: ', it) %>
+            <%~ console.log('typeof title: ', typeof title) %>
+            <%~ console.log('typeof lead: ', typeof lead) %>
+            <h1><%= it.default.title %></h1>
+            <p class="fs-4"><%= it.default.lead %></p>
+        </div>
+        <script src="@src/js/app.js" async></script>
+    </body>
+
+</html>
