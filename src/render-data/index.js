@@ -1,6 +1,6 @@
 const data = {
-  title: "Webpack Lve Reload Example",
-  lead: "You've successfully loaded Bootstrap example!",
+  title: "The title from the entry data",
+  lead: "You've successfully loaded the entry data!",
 };
 
 export default data;

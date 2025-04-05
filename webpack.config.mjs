@@ -73,6 +73,7 @@ const webpackConfig = {
       entry: {
         index: {
           import: 'src/views/index.html',
+          data: 'src/render-data/index.js',
         },
       },
       css: {
@@ -80,7 +81,10 @@ const webpackConfig = {
         filename: 'assets/css/[name].[contenthash:9].css',
       },
       preprocessor: 'eta',
-      data: 'src/render-data/index.js',
+      data: {
+        title: "The title from global data",
+        lead: "You've successfully loaded global data!",
+      },
       minify: false,
     }),
   ],
