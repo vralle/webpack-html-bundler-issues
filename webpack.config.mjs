@@ -70,6 +70,7 @@ const webpackConfig = {
   },
   plugins: [
     new HtmlBundlerPlugin({
+      test: /\.html/i,
       entry: {
         index: {
           import: 'src/views/index.html',
@@ -82,8 +83,8 @@ const webpackConfig = {
       },
       preprocessor: 'eta',
       data: {
-        title: "The title from global data",
-        lead: "You've successfully loaded global data!",
+        title: "The title from the global data",
+        lead: "You've successfully loaded the global data!",
       },
       minify: false,
     }),
