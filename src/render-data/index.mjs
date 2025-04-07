@@ -1,6 +1,3 @@
-const data = {
-  title: "The title from the entry data",
-  lead: "You've successfully loaded the entry data!",
-};
+import data from "./submodule.mjs";
 
 export default data;
