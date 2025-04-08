@@ -83,8 +83,10 @@ const webpackConfig = {
       },
       preprocessor: 'eta',
       data: {
-        title: "The title from the global data",
-        lead: "You've successfully loaded the global data!",
+        "global": {
+          "tile": "The title from the global data",
+          "lead": "You've successfully loaded the global data!",
+        }
       },
       minify: false,
     }),

@@ -4,10 +4,14 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Webpack Lve Reload Example</title>
-        <meta name="description" content="This is an example">
-        <meta name="robots" content="noindex">
+        <title><%= home.meta.title %></title>
         <link rel="stylesheet" href="@src/scss/styles.scss">
+        <meta name="description" content="<%= home.meta.description %>">
+        <meta name="canonical" content="<%= home.meta.canonical %>">
+        <meta name="robots" content="noindex">
+        <% for (const [key,value] of Object.entries(home.meta.twitterCard)) { %>
+        <meta name="twitter:<%= key %>" content="<%= value %>"> %>
+        <% } %>
     </head>
 
     <body>
@@ -20,12 +24,9 @@
                     </a>
                 </h1>
             </header>
-            <% console.log('typeof it: ', typeof it) %>
             <% console.log('it: ', it) %>
-            <% console.log('typeof title: ', typeof title) %>
-            <% console.log('typeof lead: ', typeof lead) %>
-            <h1><%= title %></h1>
-            <p class="fs-4"><%= lead %></p>
+            <h1><%= home.content.title %></h1>
+            <p class="fs-4"><%= home.content.description %></p>
         </div>
         <script src="@src/js/app.js" async></script>
     </body>
