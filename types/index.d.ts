@@ -183,6 +183,6 @@ declare interface EntryData {
   content: EntryContentData;
 }
 
-type EntryDataRegistry = {
+type EntryDataMap = {
   notExist: EntryData;
 } & Record<string, EntryData>;

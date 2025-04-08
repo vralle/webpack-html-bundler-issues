@@ -1,9 +1,9 @@
 import { URL } from "node:url";
 
 /**
- * @type {EntryDataRegistry}
+ * @type {EntryDataMap}
  */
-const data = {
+const entryDataMap = {
   notExist: {
     meta: {
       title: "Data not found",
@@ -46,29 +46,6 @@ const data = {
       description: "This is the main page of our website.",
     },
   },
-  "privacy-policy": {
-    meta: {
-      title: "Privacy Policy",
-      description: "How we collect and use data.",
-      canonical: new URL("https://example.com/privacy-policy"),
-      robots: "noindex, nofollow",
-    },
-    content: {
-      title: "Privacy Policy",
-      description: "Details about data collection and processing.",
-    },
-  },
-  error_500: {
-    meta: {
-      title: "Server Error",
-      description: "An internal error occurred, please try again later.",
-      robots: "noindex, noarchive",
-    },
-    content: {
-      title: "Error 500",
-      description: "Try refreshing the page or visiting later.",
-    },
-  },
 };
 
-export default data;
+export default entryDataMap;

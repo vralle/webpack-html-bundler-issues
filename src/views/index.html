@@ -1,15 +1,16 @@
+<% const entryData = getEntryData('home', entryDataMap) %>
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><%= home.meta.title %></title>
+        <title><%= entryData.meta.title %></title>
         <link rel="stylesheet" href="@src/scss/styles.scss">
-        <meta name="description" content="<%= home.meta.description %>">
-        <meta name="canonical" content="<%= home.meta.canonical %>">
+        <meta name="description" content="<%= entryData.meta.description %>">
+        <meta name="canonical" content="<%= entryData.meta.canonical %>">
         <meta name="robots" content="noindex">
-        <% for (const [key,value] of Object.entries(home.meta.twitterCard)) { %>
+        <% for (const [key,value] of Object.entries(entryData.meta.twitterCard)) { %>
         <meta name="twitter:<%= key %>" content="<%= value %>">
         <% } %>
     </head>
@@ -24,9 +25,11 @@
                     </a>
                 </h1>
             </header>
-            <% console.log('it: ', it) %>
-            <h1><%= home.content.title %></h1>
-            <p class="fs-4"><%= home.content.description %></p>
+            <div class="pt-5">
+                <% console.log('it: ', it) %>
+                <h1><%= entryData.content.title %></h1>
+                <p class="fs-4"><%= entryData.content.description %></p>
+            </div>
         </div>
         <script src="@src/js/app.js" async></script>
     </body>
