@@ -1,15 +1,12 @@
 import entryDataMap from "./submodule.mjs";
 
 /**
- * @template {keyof typeof entryDataMap} K
- * @param {K} entryName
+ * @param {string} entryName
  * @param {EntryDataMap} entryDataMap
- * @returns {{ entry: typeof entryDataMap[K] }}
+ * @returns {EntryData}
  */
 function getEntryData(entryName, entryDataMap) {
-  return {
-    entry: entryDataMap[entryName] ?? entryDataMap.notExist,
-  };
+  return entryDataMap[entryName] ?? entryDataMap.notExist;
 }
 
 export { entryDataMap, getEntryData };
