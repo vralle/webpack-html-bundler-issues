@@ -103,7 +103,7 @@ const webpackConfig = {
     watchFiles: ['src/**/*'],
   },
   watchOptions: {
-    poll: true,
+    poll: 500,
     // If you use require.context, webpack will watch your entire directory.
     // See https://webpack.js.org/configuration/dev-server/#devserverlivereload
     ignored: ['node_modules', 'dist'],
