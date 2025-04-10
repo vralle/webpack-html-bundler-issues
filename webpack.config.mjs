@@ -89,6 +89,15 @@ const webpackConfig = {
         }
       },
       minify: false,
+      watchFiles: {
+        includes: [
+          /render-data\/.*\.(m?js)$/ // <= watch changes in your data files
+        ],
+      },
+      experiments: {
+        // Limitation: currently doesn't works with an instance of a class
+        esmLoaderWithoutCache: true, // reload ESM files w/o cache after changes
+      }
     }),
   ],
   optimization: {},
@@ -103,7 +112,7 @@ const webpackConfig = {
     watchFiles: ['src/**/*'],
   },
   watchOptions: {
-    poll: 500,
+    poll: 10, // low timeout for webpack serve
     // If you use require.context, webpack will watch your entire directory.
     // See https://webpack.js.org/configuration/dev-server/#devserverlivereload
     ignored: ['node_modules', 'dist'],
