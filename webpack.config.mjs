@@ -94,10 +94,6 @@ const webpackConfig = {
           /render-data\/.*\.(m?js)$/ // <= watch changes in your data files
         ],
       },
-      experiments: {
-        // Limitation: currently doesn't works with an instance of a class
-        esmLoaderWithoutCache: true, // reload ESM files w/o cache after changes
-      }
     }),
   ],
   optimization: {},

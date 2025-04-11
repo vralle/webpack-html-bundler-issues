@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
-    "html-bundler-webpack-plugin": "^4.20.0-beta.4",
+    "html-bundler-webpack-plugin": "^4.20.0-beta.6",
     "sass-embedded": "^1.86.3",
     "sass-loader": "^16.0.5",
     "webpack": "^5.98.0",
